@@ -41,13 +41,14 @@ public class ConversionService implements IConversionService {
             Conversion conversion = new Conversion();
             String conversionId = UUID.randomUUID().toString();
             conversion.setCreatedTime(Instant.now());
-            conversion.setStatus("not started");
-            String path = pdf.conversion(list.get(i), conversionId);
+            conversion.setStatus("not yet started");
+            String cp = pdf.conversion(list.get(i), conversionId);
             conversion.setConversionId(conversionId);
             conversion.setPdfUrl(list.get(i));
-            conversion.setConvertedPath(path);
-            conversion.setStatus("completed");
+            conversion.setConvertedPath(cp);
+            conversion.setStatus("coversion complete");
             conversion.setModifiedTime(Instant.now());
+
             conversionList.add(conversion);
         }
             return conversionRepo.saveAll(conversionList);
