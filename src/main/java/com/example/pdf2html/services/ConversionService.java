@@ -1,6 +1,6 @@
 package com.example.pdf2html.services;
 
-import com.example.pdf2html.dto.ConversionDto;
+import com.example.pdf2html.dtos.ConversionDto;
 import com.example.pdf2html.entities.Conversion;
 import com.example.pdf2html.repositories.ConversionRepo;
 import com.example.pdf2html.utility.Pdf;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.io.IOException;
 import java.time.Instant;
@@ -36,9 +35,8 @@ public class ConversionService implements IConversionService {
 
     @Override
     public Flux<Conversion> PostConversion(@RequestBody ConversionDto conversionDto) throws PdfException, IOException {
-        List<String> list=new ArrayList<>();
+        List<String> list=conversionDto.getList();
         List<Conversion> conversionList=new ArrayList<>();
-        list=conversionDto.getList();
         for (int i=0;i<list.size();i++) {
             Conversion conversion = new Conversion();
             String conversionId = UUID.randomUUID().toString();

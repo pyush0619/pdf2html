@@ -1,5 +1,5 @@
 package com.example.pdf2html.handlers;
-import com.example.pdf2html.dto.ConversionDto;
+import com.example.pdf2html.dtos.ConversionDto;
 import com.example.pdf2html.entities.Conversion;
 import com.example.pdf2html.services.ConversionService;
 import com.example.pdf2html.services.IConversionService;

@@ -17,8 +17,8 @@ public class Pdf {
 //    public static void main(final String[] args) throws PdfException, IOException {
 //       HTMLConversionOptions conversionOptions = new HTMLConversionOptions();
 //       IDRViewerOptions viewerOptions = new IDRViewerOptions();
-//       var pdfFile = new File("C:/Users/tanvi.sharma/Desktop/Magic certificates/0342991137TS.pdf");
-//       FileUtils.copyURLToFile(new URL("https://arxiv.org/pdf/1911.11423.pdf"),new File("C:/Users/tanvi.sharma/Desktop/Magic certificates/TS.pdf"));
+//       var pdfFile = new File("C:/Users/pyush.gupta/Desktop/MLP certi/0342991137TS.pdf");
+//       FileUtils.copyURLToFile(new URL("https://arxiv.org/pdf/1911.11423.pdf"),new File("C:/Users/pyush.gupta/Desktop/MLP certi/2html.pdf"));
 //       var outputFile = new File("C:/Users/tanvi.sharma/Desktop/Magic certificates/hey");
 //       var converter = new PDFtoHTML5Converter(pdfFile,outputFile,conversionOptions,viewerOptions);
 //       converter.convert();

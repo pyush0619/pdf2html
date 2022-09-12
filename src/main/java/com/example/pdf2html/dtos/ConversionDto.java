@@ -1,4 +1,4 @@
-package com.example.pdf2html.dto;
+package com.example.pdf2html.dtos;
 
 import lombok.*;
 
@@ -11,9 +11,11 @@ import java.util.List;
 @Getter
 @Setter
 
-public class ConversionDto {/*
+public class ConversionDto {
+    /*
     private String pdfUrl;
-    private String convertedPath;*/
+    private String convertedPath;
+    */
 
     List<String> list=new ArrayList<>();
 }
