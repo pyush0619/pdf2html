@@ -37,10 +37,10 @@ public class ConversionService implements IConversionService {
     @Override
     public Flux<Conversion> PostConversion(@RequestBody ConversionDto conversionDto) throws PdfException, IOException {
         List<String> list=new ArrayList<>();
-        Conversion conversion = new Conversion();
         List<Conversion> conversionList=new ArrayList<>();
         list=conversionDto.getList();
         for (int i=0;i<list.size();i++) {
+            Conversion conversion = new Conversion();
             String conversionId = UUID.randomUUID().toString();
             conversion.setCreatedTime(Instant.now());
             conversion.setStatus("not started");
